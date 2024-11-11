@@ -1,0 +1,489 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Poppins',sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 3rem;
+    color: #b74b4b;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #b74b4b;
+    border-bottom: 3px solid #b74b4b;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 0%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #161616;
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #b74b4b;
+
+    }
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home.home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: #b74b4b;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #b74b4b;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color: white;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3)translateY(-5px);
+    background-color: #b74b4b;
+    box-shadow: 0 025px #b74b4b;
+}
+
+.typing-text{
+   font-size: 34px;
+   font-weight: 600;
+   min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "URSB Student";
+    color: #b74b4b;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+ @keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+ }
+
+ @keyframes words{
+    0%, 20%{
+        content: "IT Student";
+    }
+    21%, 40%{
+        content: "Athlete";
+    }
+    41%, 80%{
+        content: "Gamer";
+    }
+ }
+
+ @media (max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        margin-top: 4rem;
+    }
+ }
+
+.about {
+    padding: 2rem;
+    background-color: black ;
+}
+
+.about .title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.about-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-details .left,
+.about-details .right {
+    flex: 1;
+    padding: 1rem;
+}
+
+.about-details .left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-details .right {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.about-details .topic {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+@media (min-width: 768px) {
+    .about-details {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-details .left,
+    .about-details .right {
+        flex: 1;
+        max-width: 45%; 
+    }
+
+    .about-details .right {
+        text-align: left; 
+    }
+}
+
+.education {
+    padding: 2rem;
+    background-color: black;
+}
+
+.education .title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.education-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.degree {
+    font-size: 2rem;
+    background: #b74b4b;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.degree:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.degree h3 {
+    margin-bottom: 0.5rem;
+    color: whites;
+    font-size: 1.8rem;
+}
+
+.degree p {
+    margin: 0.5rem 0;
+    color: whitesmoke;
+}
+
+@media (min-width: 768px) {
+    .education-details {
+        flex-direction: row; 
+        justify-content: space-around; 
+        flex-wrap: wrap; 
+    }
+
+    .degree {
+        width: 45%; 
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 30px;
+}
+
+.title span {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-top: 100%; 
+    border: 3px solid #333; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); 
+    border-color: #b74b4b; 
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+* Center the container itself */
+.contact-container {
+    width: 400px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact .title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #b74b4b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    text-align: left;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #3498db;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #2980b9;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeOut 5s ease-out forwards;
+    animation-delay: 2s;
+}
+
+#contactForm:valid ~ .success-message {
+    display: block;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
